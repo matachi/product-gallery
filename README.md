@@ -6,6 +6,14 @@ in Django.
 Copyright (C) 2013 Daniel 'MaTachi' Jonsson  
 License: [GNU GPL version 3 or later](LICENSE)
 
+## YouTube video
+
+If you don't want to download the application to check it out, you can instead
+watch the YouTube video below.
+
+[![YouTube thumbnail](youtube-thumbnail.jpg) "Watch on
+YouTube")](http://youtu.be/hf9UK7WmRD0)
+
 ## Setup
 
 1. Open [setup.sh](setup.sh) and add your Linux username to `USER=''`.
