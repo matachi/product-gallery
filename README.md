@@ -15,7 +15,7 @@ installing packages, but this can easily be changed.
 
 ## Run local server
 
-1. `$ source ENV/bin/activate`
+1. `$ source env/bin/activate`
 2. `$ ./manage.py runserver`
 3. Open [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in a web browser to
    play with the app.
