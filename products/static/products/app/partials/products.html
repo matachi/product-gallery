@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-lg-12">
+    <ul class="pager">
+      <li ng-class="{disabled:isOutside('{{prev_page}}')}" class="previous"><a href="{{prev_page_url}}">&larr; Previous page</a></li>
+      <li ng-class="{disabled:isOutside('{{next_page}}')}" class="next"><a href="{{next_page_url}}">Next page &rarr;</a></li>
+    </ul>
+  </div>
+</div>
+<div class="row" ng-repeat="products in product_rows">
+  <div class="col-lg-4 product-cell" ng-repeat="product in products track by product.id">
+    <div class="thumbnail">
+      <img src="static/products/img/{{product.thumbnail}}">
+      <div class="caption">
+        <h3>{{product.name}}</h3>
+        <p>{{product.description}}</p>
+        <p><a href="#/products/{{product.id}}" class="btn btn-small btn-primary">Read more</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <ul class="pager">
+      <li ng-class="{disabled:isOutside('{{prev_page}}')}" class="previous"><a href="{{prev_page_url}}">&larr; Previous page</a></li>
+      <li ng-class="{disabled:isOutside('{{next_page}}')}" class="next"><a href="{{next_page_url}}">Next page &rarr;</a></li>
+    </ul>
+  </div>
+</div>

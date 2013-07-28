@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="pgApp">
+<head>
+  <meta charset="utf-8">
+  <title>Product Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet">
+  {% load staticfiles %}
+  <link href="{% static "products/app/css/app.css" %}" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <ul class="nav nav-pills pull-right" ng-controller="NavbarController">
+        <li ng-class="{active:getActive('/home')}"><a href="#/home">Home</a></li>
+        <li ng-class="{active:getActive('/products')}"><a href="#/products">Browse products</a></li>
+        <li ng-class="{active:getActive('/about')}"><a href="#/about">About</a></li>
+      </ul>
+      <h3 class="text-muted">Product Gallery</h3>
+    </div>
+    <div ng-view></div>
+    <div class="footer">
+      <p>Product Gallery 2013</p>
+    </div>
+  </div>
+  <script src="//code.jquery.com/jquery.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+  <script src="{% static "products/app/js/app.js" %}"></script>
+  <script src="{% static "products/app/js/controllers.js" %}"></script>
+  <script src="{% static "products/app/js/services.js" %}"></script>
+</body>
+</html>

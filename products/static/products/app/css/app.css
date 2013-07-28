@@ -1,0 +1,31 @@
+body {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 30px;
+}
+
+.header h3 {
+  line-height: 40px;
+  padding-bottom: 19px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+.product-cell {
+  margin-bottom: 30px;
+}
+
+.footer {
+  border-top: 1px solid #e5e5e5;
+  color: #777777;
+  margin-top: 30px;
+  padding-top: 19px;
+}
