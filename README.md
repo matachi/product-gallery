@@ -8,10 +8,10 @@ License: [GNU GPL version 3 or later](LICENSE)
 
 ## YouTube video
 
-If you don't want to download the application to check it out, you can instead
-watch the YouTube video below.
+If you don't want to download the application but still want to check it out,
+you can instead click on the image below to watch it in action on YouTube.
 
-[![YouTube thumbnail](youtube-thumbnail.jpg) "Watch on
+[![YouTube thumbnail](youtube-thumbnail.jpg "Watch on
 YouTube")](http://youtu.be/hf9UK7WmRD0)
 
 ## Setup
