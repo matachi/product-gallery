@@ -16,9 +16,18 @@ YouTube")](http://youtu.be/hf9UK7WmRD0)
 
 ## Setup
 
-1. Open [setup.sh](setup.sh) and add your Linux username to `USER=''`.
-2. Install python-virtualenv package
-3. Run `./setup.sh` to install dependencies, populate the database, config the settings file, etc. 
+### Arch Linux based distributions
+
+1. Install python-virtualenv: `sudo pacman -S python-virtualenv`
+2. Run `./setup.sh` to install dependencies, populate the database, config the
+   settings file, etc.
+
+### Debian and Ubuntu based distributions
+
+1. Install python3-pip: `sudo apt-get install python3-pip`
+2. Install virtualenv for Python 3 with pip: `sudo pip-3.3 install virtualenv`
+3. Run `./setup.sh` to install dependencies, populate the database, config the
+   settings file, etc.
 
 ## Run local server
 

@@ -1,19 +1,10 @@
 #!/bin/bash -e
 
-# Linux user account that will be owner of created folders
-USER='cosmo'
-
 # virtualenv folder name
 ENV='env'
 
 # Where it's being installed
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-# Check if USER is empty
-if [[ $USER == "" ]]; then
-    echo "ERROR: USER is empty. Add your Linux username."
-    exit 1
-fi
 
 # Set up a virtualenv
 virtualenv $ENV
