@@ -18,8 +18,8 @@ YouTube")](http://youtu.be/hf9UK7WmRD0)
 
 1. Open [setup.sh](setup.sh) and add your Linux username to `USER=''`.
 2. Install python-virtualenv package
-3. Run `./setup.sh` to install dependencies, populate the database,
-   config the settings file, etc. 
+3. Run `./setup.sh` to install dependencies, populate the database, config the settings file, etc. 
+
 ## Run local server
 
 1. `$ source env/bin/activate`
