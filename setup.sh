@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # Linux user account that will be owner of created folders
-USER=''
+USER='cosmo'
 
 # virtualenv folder name
 ENV='env'
@@ -15,25 +15,11 @@ if [[ $USER == "" ]]; then
     exit 1
 fi
 
-# Check if the script is being run as root
-if [ $EUID -ne 0 ]; then
-    echo "ERROR: Must be run as root."
-    exit 1
-fi
-
-# Store if python-virtualenv are installed
-PYTHON_VIRTUALENV_INSTALLED=$(pacman -Qs python-virtualenv)
-
-# Install virtualenv
-if [ -n $PYTHON_VIRTUALENV_INSTALLED ]; then
-    pacman -Sy python-virtualenv
-fi
-
 # Set up a virtualenv
-sudo -u $USER virtualenv $ENV
+virtualenv $ENV
 
 # Install django and dependencies
-sudo -u $USER $ENV/bin/pip install django djangorestframework
+$ENV/bin/pip install django djangorestframework
 
 # Update the project's folder path in productgallery/settings.py
 ESCAPED_DIR=$(sed 's/\//\\\//g' <<< "$DIR")
@@ -48,7 +34,7 @@ SECRET_KEY=$(sed 's/\&/\\\&/g' <<< $SECRET_KEY)
 sed -i -e "s/INSERT_SECRET_KEY/$SECRET_KEY/g" $DIR/productgallery/settings.py
 
 # Syncdb
-sudo -u $USER $ENV/bin/python manage.py syncdb
+$ENV/bin/python manage.py syncdb
 
 # Insert some sample data into the DB
-sudo -u $USER $ENV/bin/python insert_sample_db_data.py
+$ENV/bin/python insert_sample_db_data.py
