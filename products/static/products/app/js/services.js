@@ -2,7 +2,8 @@
 
 app.factory('Product', function($http) {
 
-  function getUrl(id = '') {
+  function getUrl(id) {
+    id = typeof id !== 'undefined' ? id : '';
     return 'http://127.0.0.1:8000/api/products/' + id + '?format=json';
   }
 
