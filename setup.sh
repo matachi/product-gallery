@@ -28,4 +28,5 @@ sed -i -e "s/INSERT_SECRET_KEY/$SECRET_KEY/g" $DIR/productgallery/settings.py
 $ENV/bin/python manage.py syncdb
 
 # Insert some sample data into the DB
-$ENV/bin/python insert_sample_db_data.py
+chmod u+x $DIR/insert_sample_db_data.py
+$ENV/bin/python $DIR/insert_sample_db_data.py
