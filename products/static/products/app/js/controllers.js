@@ -44,6 +44,7 @@ app.controller('ProductListController', function($scope, $location, Product) {
 app.controller('ProductDetailController',
     function($scope, $routeParams, Product) {
   Product.get($routeParams.productId, function(data) {
+    $scope.product_thumbnail = "static/products/img/" + data.thumbnail;
     $scope.product = data;
   });
 });
