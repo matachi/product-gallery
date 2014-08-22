@@ -4,7 +4,7 @@ Simple HTML5 single-page AngularJS application with a REST backend implemented
 in Django.
 
 Copyright (C) 2013 Daniel 'MaTachi' Jonsson  
-License: [GNU GPL version 3 or later](LICENSE)
+License: [MIT License](LICENSE)
 
 ## YouTube video
 
